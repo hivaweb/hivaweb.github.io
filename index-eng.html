@@ -840,12 +840,13 @@
     let openWidget = false;
     let isDragging = false;
     let offsetX, offsetY;
-    widgetApp.contentWindow.recognition.lang = 'en-EN';
+
 
     widgetApp.addEventListener('load', function () {
         const iframeContentWindow = widgetApp.contentWindow;
         const iframeDocument = iframeContentWindow.document;
         const canvas = iframeDocument.querySelector('canvas');
+        iframeContentWindow.recognition.lang = 'en-EN';
 
         /*canvas.addEventListener('mousedown', function (event) {
             isDragging = true;
