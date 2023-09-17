@@ -846,7 +846,7 @@
         const iframeContentWindow = widgetApp.contentWindow;
         const iframeDocument = iframeContentWindow.document;
         const canvas = iframeDocument.querySelector('canvas');
-        iframeContentWindow.recognition.lang = 'ru-RU';
+        widgetApp.contentWindow.switchLanguage();
 
         /*canvas.addEventListener('mousedown', function (event) {
             isDragging = true;
