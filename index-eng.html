@@ -840,6 +840,7 @@
     let openWidget = false;
     let isDragging = false;
     let offsetX, offsetY;
+    widgetApp.contentWindow.recognition.lang = 'en-EN';
 
     widgetApp.addEventListener('load', function () {
         const iframeContentWindow = widgetApp.contentWindow;
