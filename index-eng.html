@@ -875,8 +875,9 @@
                     widgetApp.style.bottom = "50px";
                 }
 
-                widgetApp.height = "500px";
+                widgetApp.height = "430px";
                 openWidget = true;
+                widgetApp.contentWindow.showModal();
                 widgetApp.contentWindow.sayHello();
                 widgetBackground.style.display = "block";
             } else {
@@ -889,6 +890,7 @@
 
                 widgetApp.height = "170px";
                 openWidget = false;
+                widgetApp.contentWindow.hideModal();
                 widgetApp.contentWindow.stopRecognize();
                 widgetApp.contentWindow.clearAfterClose();
                 widgetBackground.style.display = "none";
